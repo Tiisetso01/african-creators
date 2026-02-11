@@ -1,26 +1,123 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Premium Obsidian & Bronze-Gold Palette */
+  --background: #050505;
+  /* Inky Obsidian */
+  --foreground: #FDFCF0;
+  /* Antique Ivory */
+
+  --card: #0F0F0F;
+  /* Onyx */
+  --card-foreground: #FDFCF0;
+
+  --popover: #0F0F0F;
+  --popover-foreground: #FDFCF0;
+
+  --primary: #C5A059;
+  /* Muted Bronze Gold */
+  --primary-foreground: #000000;
+
+  --secondary: #1A1A1A;
+  --secondary-foreground: #FDFCF0;
+
+  --muted: #1A1A1A;
+  --muted-foreground: #8C8C82;
+  /* Muted stone */
+
+  --accent: #C5A059;
+  --accent-foreground: #000000;
+
+  --destructive: #420F0F;
+  --destructive-foreground: #FDFCF0;
+
+  --border: #262626;
+  --input: #262626;
+  --ring: #C5A059;
+
+  --radius: 0.75rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-sans: var(--font-outfit), var(--font-geist-sans);
+  --font-serif: var(--font-playfair), serif;
+  --font-mono: var(--font-geist-mono);
+
+  --animate-mesh: mesh 20s ease infinite;
+
+  @keyframes mesh {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 89, 0.1);
+}
+
+/* Subtle Grain Effect */
+.bg-grain {
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  filter: contrast(150%) brightness(1000%);
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* Mesh Gradient Background */
+.bg-mesh {
+  background: radial-gradient(at 0% 0%, rgba(197, 160, 89, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(197, 160, 89, 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(197, 160, 89, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(197, 160, 89, 0.03) 0px, transparent 50%);
+  background-size: 200% 200%;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: black;
 }
