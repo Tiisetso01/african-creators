@@ -57,7 +57,7 @@ export default function ContactPage() {
 
                         <div className="grid sm:grid-cols-2 gap-10">
                             {[
-                                { icon: Mail, label: "Digital Correspondence", value: "hello@africancreators.online" },
+                                { icon: Mail, label: "Email Inquiry", value: "hello@africancreators.online" },
                                 { icon: Phone, label: "Direct Line", value: "Available on request" },
                                 { icon: MapPin, label: "Studio", value: "Johannesburg · Remote" },
                                 { icon: Clock, label: "Efficiency Hours", value: "08:00 — 17:00 CAT" }
@@ -107,7 +107,7 @@ export default function ContactPage() {
                                         <div className="grid md:grid-cols-2 gap-8">
                                             <div className="space-y-3">
                                                 <label className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground ml-1">
-                                                    Principal Name <span className="text-primary">*</span>
+                                                    Your Name <span className="text-primary">*</span>
                                                 </label>
                                                 <input
                                                     type="text"
@@ -119,7 +119,7 @@ export default function ContactPage() {
                                                 />
                                             </div>
                                             <div className="space-y-3">
-                                                <label className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground ml-1">Enterprise</label>
+                                                <label className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground ml-1">Company Name</label>
                                                 <input
                                                     type="text"
                                                     value={form.company}
@@ -132,7 +132,7 @@ export default function ContactPage() {
 
                                         <div className="space-y-3">
                                             <label className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground ml-1">
-                                                Digital Address <span className="text-primary">*</span>
+                                                Business Email <span className="text-primary">*</span>
                                             </label>
                                             <input
                                                 type="email"
@@ -145,7 +145,7 @@ export default function ContactPage() {
                                         </div>
 
                                         <div className="space-y-3">
-                                            <label className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground ml-1">Primary Friction Point</label>
+                                            <label className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground ml-1">Primary Business Challenge</label>
                                             <select
                                                 value={form.friction}
                                                 onChange={e => setForm(f => ({ ...f, friction: e.target.value }))}

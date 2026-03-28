@@ -8,7 +8,8 @@ import {
   FileText,
   MessageSquare,
   BarChart3,
-  Check
+  Check,
+  Zap
 } from "lucide-react";
 
 export default function Home() {
@@ -154,10 +155,12 @@ export default function Home() {
               }
             ].map((feature, i) => (
               <div key={i} className="group p-12 bg-background/40 hover:bg-card/60 transition-all duration-500">
-                <div className="h-14 w-14 rounded-full border border-primary/20 flex items-center justify-center mb-10 text-primary group-hover:bg-primary group-hover:text-black transition-all duration-700 shadow-xl group-hover:shadow-primary/40 text-background">
-                  <feature.icon size={28} className="group-hover:scale-110 transition-transform duration-500" />
+                <div className="flex items-center gap-6 mb-10">
+                  <div className="h-14 w-14 rounded-full border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-all duration-700 shadow-xl group-hover:shadow-primary/40 text-background shrink-0">
+                    <feature.icon size={28} className="group-hover:scale-110 transition-transform duration-500" />
+                  </div>
+                  <h3 className="text-2xl font-serif font-bold tracking-tight group-hover:text-primary transition-colors duration-500 leading-tight">{feature.title}</h3>
                 </div>
-                <h3 className="text-2xl font-serif font-bold mb-5 tracking-tight group-hover:text-primary transition-colors duration-500">{feature.title}</h3>
                 <p className="text-muted-foreground leading-relaxed font-light font-sans text-sm group-hover:text-foreground/80 transition-colors duration-500">{feature.desc}</p>
               </div>
             ))}
@@ -170,13 +173,16 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-24">
             {[
-              { label: "Administrative Overhead", value: "-30%", accent: "text-green-500" },
-              { label: "Operational Speed", value: "10x", accent: "text-primary" },
-              { label: "Integration Depth", value: "Full-Stack", accent: "text-foreground" }
+              { label: "Manual Admin Time", value: "-30%", accent: "text-green-500", icon: Clock },
+              { label: "Operational Speed", value: "10x", accent: "text-primary", icon: TrendingUp },
+              { label: "End-to-End Connectivity", value: "Full Sync", accent: "text-foreground", icon: Zap }
             ].map((stat, i) => (
               <div key={i} className="space-y-6">
-                <div className="text-[10px] font-bold uppercase tracking-[0.5em] text-muted-foreground border-b border-white/5 pb-4 inline-block">{stat.label}</div>
-                <div className={`text-7xl md:text-[9rem] font-serif font-bold ${stat.accent} leading-none tracking-tighter`}>{stat.value}</div>
+                <div className="flex items-center gap-3 border-b border-white/10 pb-4">
+                  <stat.icon size={16} className="text-primary/60" />
+                  <div className="text-[12px] font-bold uppercase tracking-[0.3em] text-muted-foreground inline-block">{stat.label}</div>
+                </div>
+                <div className={`text-6xl md:text-8xl font-serif font-bold ${stat.accent} leading-none tracking-tighter`}>{stat.value}</div>
               </div>
             ))}
           </div>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { Menu, X } from "lucide-react";
@@ -10,6 +11,7 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -41,15 +43,21 @@ export function Navbar() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-10">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            className="text-[10px] uppercase tracking-[0.3em] font-bold text-foreground/60 hover:text-primary transition-all duration-300"
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
+                    {navLinks.map((link) => {
+                        const isActive = pathname === link.href;
+                        return (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                className={cn(
+                                    "text-[10px] uppercase tracking-[0.3em] font-bold transition-all duration-300 hover:text-primary",
+                                    isActive ? "text-primary" : "text-foreground/60"
+                                )}
+                            >
+                                {link.name}
+                            </Link>
+                        );
+                    })}
                     <Link href="/contact">
                         <Button variant="outline" className="ml-4 rounded-full border-primary/20 text-primary hover:bg-primary hover:text-black font-bold uppercase tracking-widest text-[10px] px-6">
                             Free Audit
@@ -69,16 +77,22 @@ export function Navbar() {
                 {isMobileMenuOpen && (
                     <div className="fixed inset-0 bg-background z-40 flex flex-col items-center justify-center gap-10 animate-in fade-in duration-300">
                         <div className="absolute inset-0 bg-mesh opacity-20 pointer-events-none" />
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className="text-4xl font-serif font-bold text-foreground hover:text-primary transition-colors italic"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href;
+                            return (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className={cn(
+                                        "text-4xl font-serif font-bold transition-colors italic",
+                                        isActive ? "text-primary" : "text-foreground hover:text-primary"
+                                    )}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    {link.name}
+                                </Link>
+                            );
+                        })}
                         <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                             <Button
                                 size="lg"

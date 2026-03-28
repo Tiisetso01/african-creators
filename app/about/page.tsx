@@ -58,18 +58,20 @@ export default function AboutPage() {
                             },
                             {
                                 icon: Trophy,
-                                title: "Local context",
+                                title: "Local Context",
                                 desc: "We understand the unique challenges of the African business landscape."
                             }
-                        ].map((item, i) => (
-                            <div key={i} className="space-y-6 group">
-                                <div className="h-12 w-12 rounded border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-all">
-                                    <item.icon size={24} />
-                                </div>
-                                <h3 className="text-xl font-serif font-bold">{item.title}</h3>
-                                <p className="text-sm text-muted-foreground leading-relaxed italic">{item.desc}</p>
-                            </div>
-                        ))}
+                         ].map((item, i) => (
+                             <div key={i} className="space-y-6 group">
+                                 <div className="flex items-center gap-4">
+                                     <div className="h-12 w-12 rounded border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-all shrink-0">
+                                         <item.icon size={24} />
+                                     </div>
+                                     <h3 className="text-xl font-serif font-bold leading-tight">{item.title}</h3>
+                                 </div>
+                                 <p className="text-sm text-muted-foreground leading-relaxed italic">{item.desc}</p>
+                             </div>
+                         ))}
                     </div>
                 </div>
             </section>
