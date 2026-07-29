@@ -96,16 +96,13 @@ export default function RootLayout({
               "telephone": "",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "",
-                "addressLocality": "Johannesburg",
-                "addressRegion": "Gauteng",
-                "postalCode": "",
+                "addressLocality": "Cape Town",
+                "addressRegion": "Western Cape",
                 "addressCountry": "ZA"
               },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": -26.2041,
-                "longitude": 28.0473
+              "areaServed": {
+                "@type": "Continent",
+                "name": "Africa"
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -119,7 +116,7 @@ export default function RootLayout({
                 "opens": "08:00",
                 "closes": "17:00"
               },
-              "description": "We design and build robust business automation systems for traditional African businesses to help them save time and scale without manual errors."
+              "description": "We design and build robust business automation systems for businesses across Africa to help them save time and scale without manual errors."
             })
           }}
         />
