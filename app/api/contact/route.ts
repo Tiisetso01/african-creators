@@ -20,7 +20,11 @@ export async function POST(req: NextRequest) {
         to: ['tiisetso@africancreators.co.za'],
         subject: `New Audit Request — ${company || 'Unknown Company'}`,
         html: `
-          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #050505; color: #FDFCF0; padding: 40px; border-radius: 12px;">
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #050505; color: #FDFCF0; padding: 40px; border-radius: 12px; border: 1px solid #1F1F1F;">
+            <div style="margin-bottom: 24px;">
+              <img src="https://africancreators.co.za/icon.png" alt="African Creators" width="44" height="44" style="border-radius: 10px; display: block;" />
+            </div>
+
             <div style="border-left: 4px solid #C5A059; padding-left: 20px; margin-bottom: 32px;">
               <h1 style="font-size: 24px; margin: 0 0 8px; color: #C5A059;">New Audit Request</h1>
               <p style="margin: 0; color: #8C8C82; font-size: 14px;">Someone wants to reclaim their margin.</p>
@@ -65,7 +69,11 @@ export async function POST(req: NextRequest) {
         to: [email],
         subject: 'We received your audit request — African Creators',
         html: `
-          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #050505; color: #FDFCF0; padding: 40px; border-radius: 12px;">
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #050505; color: #FDFCF0; padding: 40px; border-radius: 12px; border: 1px solid #1F1F1F;">
+            <div style="margin-bottom: 24px;">
+              <img src="https://africancreators.co.za/icon.png" alt="African Creators" width="44" height="44" style="border-radius: 10px; display: block;" />
+            </div>
+
             <div style="margin-bottom: 32px;">
               <h1 style="font-size: 28px; margin: 0 0 8px; color: #C5A059; font-style: italic;">Your request is in.</h1>
               <p style="margin: 0; color: #8C8C82;">We'll be in touch within 24 hours.</p>
