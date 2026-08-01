@@ -41,7 +41,7 @@ export default function TermsPage() {
 
                     <section className="space-y-3">
                         <h2 className="text-lg font-bold text-foreground uppercase tracking-widest text-[11px]">7. Contact</h2>
-                        <p>For any questions regarding these terms, contact us at <a href="mailto:hello@africancreators.online" className="text-primary hover:underline">hello@africancreators.online</a>.</p>
+                        <p>For any questions regarding these terms, contact us at <a href="mailto:hello@africancreators.co.za" className="text-primary hover:underline">hello@africancreators.co.za</a>.</p>
                     </section>
                 </div>
             </div>

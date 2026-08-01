@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     canonical: "/privacy",
   },
   openGraph: {
-    url: "https://africancreators.online/privacy",
+    url: "https://africancreators.co.za/privacy",
     title: "Privacy Policy | African Creators",
     description: "How we collect, use, and protect your personal information when requesting a business automation audit.",
   },

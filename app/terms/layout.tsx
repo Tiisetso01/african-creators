@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     canonical: "/terms",
   },
   openGraph: {
-    url: "https://africancreators.online/terms",
+    url: "https://africancreators.co.za/terms",
     title: "Terms of Service | African Creators",
     description: "Governing terms and conditions for using our website and services.",
   },

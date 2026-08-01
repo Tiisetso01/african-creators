@@ -25,7 +25,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://africancreators.online"),
+  metadataBase: new URL("https://africancreators.co.za"),
   title: {
     default: "African Creators | Business Efficiency & Automation Experts",
     template: "%s | African Creators",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "save business time",
     "no-code automation"
   ],
-  authors: [{ name: "African Creators", url: "https://africancreators.online" }],
+  authors: [{ name: "African Creators", url: "https://africancreators.co.za" }],
   creator: "African Creators",
   publisher: "African Creators",
   alternates: {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_ZA",
-    url: "https://africancreators.online",
+    url: "https://africancreators.co.za",
     title: "African Creators | Business Efficiency & Automation Experts",
     description: "We help traditional African businesses save time and money by automating boring daily work. Less admin, more profit.",
     siteName: "African Creators",
@@ -90,9 +90,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "African Creators",
-              "image": "https://africancreators.online/favicon.ico",
-              "@id": "https://africancreators.online/#organization",
-              "url": "https://africancreators.online",
+              "image": "https://africancreators.co.za/favicon.ico",
+              "@id": "https://africancreators.co.za/#organization",
+              "url": "https://africancreators.co.za",
               "telephone": "",
               "address": {
                 "@type": "PostalAddress",

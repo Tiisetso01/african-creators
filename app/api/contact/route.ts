@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     // Email to the business owner
     await resend.emails.send({
       from: 'African Creators <onboarding@resend.dev>',
-      to: ['hello@africancreators.online'],
+      to: ['tiisetso@africancreators.co.za'],
       subject: `New Audit Request — ${company || 'Unknown Company'}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #050505; color: #FDFCF0; padding: 40px; border-radius: 12px;">
@@ -78,7 +78,7 @@ export async function POST(req: NextRequest) {
 
           <div style="margin-top: 40px; padding: 24px; background: #0F0F0F; border-radius: 8px; border-left: 3px solid #C5A059;">
             <p style="margin: 0 0 4px; font-size: 12px; color: #8C8C82; text-transform: uppercase; letter-spacing: 0.1em;">African Creators</p>
-            <p style="margin: 0; font-size: 12px; color: #8C8C82;">Johannesburg · Based in Africa. Serving Globally.</p>
+            <p style="margin: 0; font-size: 12px; color: #8C8C82;">Cape Town · Based in Africa. Serving Globally.</p>
           </div>
         </div>
       `,

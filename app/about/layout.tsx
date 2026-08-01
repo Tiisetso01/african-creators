@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     canonical: "/about",
   },
   openGraph: {
-    url: "https://africancreators.online/about",
+    url: "https://africancreators.co.za/about",
     title: "About Us | African Creators",
     description: "Learn about African Creators. We design resilient, automated systems to help African businesses save time and increase profit.",
   },

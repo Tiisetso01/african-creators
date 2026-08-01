@@ -31,12 +31,12 @@ export default function PrivacyPage() {
 
                     <section className="space-y-3">
                         <h2 className="text-lg font-bold text-foreground uppercase tracking-widest text-[11px]">5. Your Rights</h2>
-                        <p>You have the right to request access to, correction of, or deletion of any personal information we hold about you. To exercise these rights, contact us at <a href="mailto:hello@africancreators.online" className="text-primary hover:underline">hello@africancreators.online</a>.</p>
+                        <p>You have the right to request access to, correction of, or deletion of any personal information we hold about you. To exercise these rights, contact us at <a href="mailto:hello@africancreators.co.za" className="text-primary hover:underline">hello@africancreators.co.za</a>.</p>
                     </section>
 
                     <section className="space-y-3">
                         <h2 className="text-lg font-bold text-foreground uppercase tracking-widest text-[11px]">6. Contact</h2>
-                        <p>For any privacy-related questions, reach us at <a href="mailto:hello@africancreators.online" className="text-primary hover:underline">hello@africancreators.online</a>.</p>
+                        <p>For any privacy-related questions, reach us at <a href="mailto:hello@africancreators.co.za" className="text-primary hover:underline">hello@africancreators.co.za</a>.</p>
                     </section>
                 </div>
             </div>
