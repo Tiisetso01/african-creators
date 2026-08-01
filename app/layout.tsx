@@ -47,6 +47,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/icon.png",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_ZA",
@@ -54,11 +62,20 @@ export const metadata: Metadata = {
     title: "African Creators | Business Efficiency & Automation Experts",
     description: "We help traditional African businesses save time and money by automating boring daily work. Less admin, more profit.",
     siteName: "African Creators",
+    images: [
+      {
+        url: "https://africancreators.co.za/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "African Creators - Systems Designers & Business Automation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "African Creators | Business Efficiency & Automation Experts",
     description: "We help traditional African businesses save time and money by automating boring daily work. Less admin, more profit.",
+    images: ["https://africancreators.co.za/og-image.png"],
   },
   robots: {
     index: true,
@@ -90,7 +107,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "African Creators",
-              "image": "https://africancreators.co.za/favicon.ico",
+              "image": "https://africancreators.co.za/og-image.png",
               "@id": "https://africancreators.co.za/#organization",
               "url": "https://africancreators.co.za",
               "telephone": "",
