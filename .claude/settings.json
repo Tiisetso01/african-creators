@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.capterra.co.za)",
+      "WebFetch(domain:www.hellopeter.com)",
+      "WebFetch(domain:www.getapp.za.com)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:healthbridge.co.za)"
+    ]
+  }
+}
