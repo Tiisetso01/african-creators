@@ -1,6 +1,5 @@
 "use client";
 
-import { BusinessCard } from "@/components/ui/BusinessCard";
 import Link from "next/link";
 import { ArrowRight, Trophy, Users, Shield, Target } from "lucide-react";
 import { motion } from "motion/react";
@@ -58,21 +57,6 @@ export default function AboutPage() {
               </div>
             </RevealRight>
           </div>
-        </div>
-      </section>
-
-      {/* ══ BUSINESS CARD SHOWCASE ══ */}
-      <section className="py-20 px-6 relative border-t border-white/[0.06]">
-        <div className="container mx-auto max-w-4xl">
-          <Reveal>
-            <div className="text-center mb-6 space-y-3">
-              <span className="text-[10px] uppercase tracking-[0.4em] text-foreground/40 font-mono font-bold">Digital Identity</span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary">Official Business Card</h2>
-            </div>
-          </Reveal>
-          <Reveal>
-            <BusinessCard />
-          </Reveal>
         </div>
       </section>
 
