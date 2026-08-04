@@ -51,10 +51,10 @@ export async function POST(req: NextRequest) {
       </div>
     `
 
-    // 1a. Lead notification to Primary Admin Gmail (Always succeeds in Resend testing mode)
+    // 1a. Lead notification to Primary Admin Gmail
     try {
       await resend.emails.send({
-        from: 'African Creators <onboarding@resend.dev>',
+        from: 'African Creators <tiisetso@africancreators.co.za>',
         to: ['mmabokotiisetso1@gmail.com'],
         subject: `New Audit Request — ${company || name}`,
         html: adminNotificationHtml,
@@ -64,10 +64,10 @@ export async function POST(req: NextRequest) {
       console.error('Admin Gmail notification error:', adminErr)
     }
 
-    // 1b. Lead notification to Titan Business Email (Succeeds when domain verified)
+    // 1b. Lead notification to Titan Business Email
     try {
       await resend.emails.send({
-        from: 'African Creators <onboarding@resend.dev>',
+        from: 'African Creators <tiisetso@africancreators.co.za>',
         to: ['tiisetso@africancreators.co.za'],
         subject: `New Audit Request — ${company || name}`,
         html: adminNotificationHtml,
@@ -80,7 +80,7 @@ export async function POST(req: NextRequest) {
     // 2. Confirmation email to the person who submitted
     try {
       await resend.emails.send({
-        from: 'African Creators <onboarding@resend.dev>',
+        from: 'African Creators <tiisetso@africancreators.co.za>',
         to: [email],
         subject: 'We received your audit request — African Creators',
         html: `
