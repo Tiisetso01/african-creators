@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     try {
       await resend.emails.send({
         from: 'African Creators <onboarding@resend.dev>',
-        to: ['tiisetso@africancreators.co.za'],
+        to: ['tiisetso@africancreators.co.za', 'mmabokotiisetso1@gmail.com'],
         subject: `New Audit Request — ${company || 'Unknown Company'}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #050505; color: #FDFCF0; padding: 40px; border-radius: 12px; border: 1px solid #1F1F1F;">
